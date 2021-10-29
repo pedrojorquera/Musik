@@ -66,7 +66,7 @@ public class Sugerencias extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(0, 153, 153));
 
         jButtonSugerirCancion.setText("Sugerir canción");
@@ -76,7 +76,7 @@ public class Sugerencias extends javax.swing.JFrame {
             }
         });
 
-        jList3.setBackground(new java.awt.Color(0, 102, 102));
+        jList3.setBackground(new java.awt.Color(102, 102, 102));
         jList3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jList3.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPaneListaCanciones.setViewportView(jList3);
@@ -148,8 +148,10 @@ public class Sugerencias extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    //Donde guardamos el valor del elemento seleccionado
     String SugerenciaCancion;
     DefaultListModel CancionesSugeridas = new DefaultListModel<String>();
+    //Metodo donde se almacena el valor String seleccionado y se muestra por pantalla
     private void jButtonSugerirCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSugerirCancionActionPerformed
         // TODO add your handling code here:
         SugerenciaCancion = JOptionPane.showInputDialog(this, "¿Que canción quieres sugerir?", "Sugerencia", JOptionPane.QUESTION_MESSAGE);
@@ -162,7 +164,7 @@ public class Sugerencias extends javax.swing.JFrame {
             jList3.setModel(CancionesSugeridas);
         }
     }//GEN-LAST:event_jButtonSugerirCancionActionPerformed
-//Cerrar Sugerencias
+//Botón para cerrar Sugerencias
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
         // TODO add your handling code here:
         setVisible(false);
